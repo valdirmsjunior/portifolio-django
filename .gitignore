@@ -1,0 +1,23 @@
+# Ambientes Virtuais
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Banco de dados local (SQLite)
+db.sqlite3
+
+# Arquivos de sistema do Mac
+.DS_Store
+.python-version
+
+# Variáveis de ambiente (Segurança)
+.env
+
+# Pasta de arquivos estáticos/media coletados
+static/
+media/
