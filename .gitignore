@@ -21,3 +21,5 @@ db.sqlite3
 # Pasta de arquivos estáticos/media coletados
 static/
 media/
+
+.prettierignore
