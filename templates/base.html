@@ -1,4 +1,5 @@
 {% load static %}
+{% load portfolio_extras %}
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -38,17 +39,17 @@
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="{% url 'home' %}"
-              class="text-gray-600 hover:text-primary transition font-medium"
+              class="transition font-medium {% active_link 'home' 'text-indigo-600 border-b-2 border-indigo-600' 'text-gray-600 hover:text-indigo-600' %}"
               >Início</a
             >
             <a
-              href="#"
-              class="text-gray-600 hover:text-primary transition font-medium"
+              href="{% url 'projetos' %}"
+              class="transition font-medium {% active_link 'projetos' 'text-indigo-600 border-b-2 border-indigo-600' 'text-gray-600 hover:text-indigo-600' %}"
               >Projetos</a
             >
             <a
-              href="#"
-              class="text-gray-600 hover:text-primary transition font-medium"
+              href="{% url 'sobre' %}"
+              class="transition font-medium {% active_link 'sobre' 'text-indigo-600 border-b-2 border-indigo-600' 'text-gray-600 hover:text-indigo-600' %}"
               >Sobre</a
             >
           </div>
@@ -83,10 +84,10 @@
         <div
           class="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm"
         >
-          <p>&copy; 2026 - Desenvolvido com Django 6.0 & Python 3.14</p>
+          <p>&copy; 2026 - Desenvolvido com Django 6.0 & Python 3.14 por {{ contato.nome }}</p>
           <div class="mt-4 md:mt-0 space-x-6">
-            <a href="#" class="hover:text-primary">GitHub</a>
-            <a href="#" class="hover:text-primary">LinkedIn</a>
+            <a href="{{ contato.github }}" class="hover:text-primary">GitHub</a>
+            <a href="{{ contato.linkedin }}" class="hover:text-primary">LinkedIn</a>
           </div>
         </div>
       </div>

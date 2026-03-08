@@ -19,7 +19,7 @@ db.sqlite3
 .env
 
 # Pasta de arquivos estáticos/media coletados
-static/
+staticfiles/
 media/
 
 .prettierignore
